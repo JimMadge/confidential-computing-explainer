@@ -7,9 +7,7 @@
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
 
-    <title>
-      Title
-    </title>
+    <title>Confidential Computing</title>
 
     <link rel="stylesheet" href="reveal.js/dist/reset.css" />
     <link rel="stylesheet" href="reveal.js/dist/reveal.css" />
@@ -74,19 +72,131 @@
       em {
         color: var(--accent);
       }
+      .plain-text {
+        color: #5f8700;
+      }
+      .encrypted-text {
+        color: #dc322f;
+      }
     </style>
   </head>
   <body>
     <div class="reveal">
       <div class="slides">
         <section>
-          <h1 class="r-fit-text">Slide 1</h1></section>
+          <h1 class="r-fit-text">Confidential Computing</h1>
+        </section>
         <section>
-          <h2>Slide 2</h2>
-          <!-- prettier-ignore -->
-          <aside data-markdown class="notes">
-            Markdown notes
-          </aside>
+          <p>Try to build from the ground up</p>
+          <p>No maths</p>
+        </section>
+        <section>
+          <h2>Summary</h2>
+          CC is …
+        </section>
+        <section>
+          <section data-auto-animate>
+            <h2>Cryptography</h2>
+            <blockquote>
+              Securing <em>private</em> data (or communications) against
+              <em>unauthorised</em> readers
+            </blockquote>
+            <!-- prettier-ignore -->
+            <aside data-markdown class="notes">
+              Markdown notes
+            </aside>
+          </section>
+          <section data-auto-animate>
+            <h2>Cryptography</h2>
+            <h3>Ciphers</h3>
+            <blockquote>
+              A <em>process</em> (algorithm) for <em>encrypting</em> or
+              <em>decrypting</em>
+            </blockquote>
+            <p>
+              <span class="plain-text">plain text</span> — cipher →
+              <span class="encrypted-text">encrypted text</span>
+            </p>
+            <p>
+              <span class="plain-text">plain text</span> ← cipher —
+              <span class="encrypted-text">encrypted text</span>
+            </p>
+            <!-- prettier-ignore -->
+            <aside data-markdown class="notes">
+              Markdown notes
+            </aside>
+          </section>
+          <section data-auto-animate>
+            <h2>Cryptography</h2>
+            <h3>A Substitution Cipher</h3>
+            <p style="font-family: monospace">abcdefghijklmnopqrstuvwxyz</p>
+            <p style="font-family: monospace">xgfvwuniepoqdbcrkmzhaytljs</p>
+            <p
+              class="plain-text fragment custom blur"
+              style="font-family: monospace"
+            >
+              hello world
+            </p>
+            <p
+              class="encrypted-text fragment custom blur"
+              style="font-family: monospace"
+            >
+              iwqqc tcmqv
+            </p>
+            <p class="fragment custom blur">
+              This is a <em>terrible</em> cipher!
+            </p>
+            <!-- prettier-ignore -->
+            <aside data-markdown class="notes">
+              Take each letter and substitute it with another
+
+              We encrypt the phrase "hello world" with this cipher
+
+              This is a terrible cipher
+
+              - Which letters often appear in a pair in the middle of a word? g, l, m, n, p, s, t
+              - What words are likely to open a communication? hi, hello
+            </aside>
+          </section>
+          <section data-auto-animate>
+            <h2>Cryptography</h2>
+            <h3>An AES Symmetric Cipher</h3>
+            <p>Requires a <em>secret</em></p>
+            <p class="plain-text" style="font-family: monospace">hello world</p>
+            <p
+              class="encrypted-text fragment custom blur"
+              style="font-family: monospace"
+            >
+              65 01 b1 07 5e 2f bf 13 04 c6 fb 2d 9c aa cc be
+            </p>
+            <p class="fragment custom blur">
+              <span style="font-size: medium"
+                >2,400,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000</span
+              >
+              years to break
+            </p>
+            <!-- prettier-ignore -->
+            <aside data-markdown class="notes">
+              A much more sophisticated cipher
+
+              The cipher requires a secret, which **must** be kept secret
+              When encoded we have a series of bytes (numbers between 0 and 250), this is just a way to represent it
+
+              2.4*10^51 years to break using brute force with a supercomputer (https://bruteforce.bitsnbites.eu/)
+
+              Not quite a billion million, but not far off Longer than the age of the universe
+            </aside>
+          </section>
+          <section data-auto-animate>
+            <h2>Cryptography</h2>
+            <h3>Lessons</h3>
+            <ul>
+              <li>We can make data <em>unreadable</em></li>
+              <li>Good ciphers are <em>very secure</em></li>
+              <li>Poor ciphers are <em>easy to break</em></li>
+              <li>Secrets must be <em>guarded</em></li>
+            </ul>
+          </section>
         </section>
       </div>
     </div>
