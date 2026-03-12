@@ -85,14 +85,77 @@
       <div class="slides">
         <section>
           <h1 class="r-fit-text">Confidential Computing</h1>
+          <h2 class="r-fit-text">For a General audience</h2>
         </section>
         <section>
           <p>Try to build from the ground up</p>
           <p>No maths</p>
         </section>
         <section>
-          <h2>Summary</h2>
-          CC is …
+          <section data-auto-animate>
+            <h2>Summary</h2>
+            <div class="columns">
+              <div class="column" style="width: 50%">
+                <h6>Conventional</h6>
+                <p>
+                  <em>Memory</em> is <em>unencrypted</em>.
+                  <br />
+                  <em>Privileged</em> processes can access arbitrary memory, as
+                  plain text.
+                </p>
+              </div>
+              <div class="column" style="width: 50%">
+                <h6>TEE</h6>
+                <p>
+                  Portions of <em>encrypted</em> memory are
+                  <em>reserved</em> for <em>confidential</em> work, each with
+                  its <em>own encryption key</em>.
+                  <br />
+                  Processes outside of the TEE <em>cannot</em> the key.
+                  <br />
+                  A <em>Privileged</em> process would see TEE memory as
+                  encrypted text.
+                </p>
+              </div>
+            </div>
+          </section>
+          <section data-auto-animate>
+            <h2>Summary</h2>
+            <h3>The Take Home Message</h3>
+            <blockquote>
+              You can use a computer in a way that is <em>private</em>, even
+              from the <em>owner</em> of that computer.
+            </blockquote>
+          </section>
+          <section data-auto-animate>
+            <h2>Summary</h2>
+            <h3>An Anology …</h3>
+            <div class="columns">
+              <div class="column" style="width: 50%">
+                <h6>Conventional</h6>
+                <p>
+                  Imagine an <em>open plan office</em>.
+                  <br />
+                  Each worker has a <em>desk</em>, but other workers desks are
+                  <em>visible</em>.
+                  <br />
+                  A <em>manager</em> is free to roam the office at
+                  <em>look at every desk</em>.
+                </p>
+              </div>
+              <div class="column" style="width: 50%">
+                <h6>TEE</h6>
+                <p>
+                  Perhaps an office with <em>locked rooms</em>.
+                  <br />
+                  Workers are <em>segregated by the project</em> they work on.
+                  <br />
+                  As a manager roams the office, they
+                  <em>cannot enter</em> rooms they pass.
+                </p>
+              </div>
+            </div>
+          </section>
         </section>
         <section>
           <section data-auto-animate>
