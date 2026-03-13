@@ -97,23 +97,26 @@
             <div class="columns">
               <div class="column" style="width: 40%">
                 <h6>Conventional</h6>
-                <p>
-                  <em>Memory</em> is <em>unencrypted</em>.
-                  <br />
-                  <em>Privileged</em> processes can access arbitrary memory, as
+                <p class="fragment custom blur">
+                  <em>Working Data</em> is <em>unencrypted</em>.
+                </p>
+                <p class="fragment custom blur">
+                  <em>Privileged</em> users can access all working data, as
                   <em>plain text</em>.
                 </p>
               </div>
               <div class="column" style="width: 60%">
                 <h6>TEE</h6>
-                <p>
-                  Portions of <em>encrypted</em> memory are
-                  <em>reserved</em> for <em>confidential</em> work, each with
+                <p class="fragment custom blur">
+                  <em>Encrypted</em> enclcaves are
+                  <em>reserved</em> for <em>confidential working data</em>, each with
                   its <em>own encryption key</em>.
-                  <br />
-                  Processes outside of the TEE <em>cannot</em> obtain the key.
-                  <br />
-                  A <em>Privileged</em> process would see TEE memory as
+                </p>
+                <p class="fragment custom blur">
+                  Nothing outside of the TEE <em>cannot</em> obtain the key.
+                </p>
+                <p class="fragment custom blur">
+                  A <em>privileged</em> user would see TEE data as
                   <em>encrypted text</em>.
                 </p>
               </div>
@@ -131,27 +134,31 @@
             <h3>Summary</h3>
             <h4>An Anology …</h4>
             <div class="columns">
-              <div class="column" style="width: 50%">
+              <div class="column" style="width: 45%">
                 <h6>Conventional</h6>
-                <p>
+                <p class="fragment custom blur" data-fragment-index="1">
                   Imagine an <em>open plan office</em>.
-                  <br />
+                </p>
+                <p class="fragment custom blur" data-fragment-index="2">
                   Each worker has a <em>desk</em>, but other workers desks are
                   <em>visible</em>.
-                  <br />
+                </p>
+                <p class="fragment custom blur" data-fragment-index="3">
                   A <em>manager</em> is free to roam the office at
                   <em>look at every desk</em>.
                 </p>
               </div>
-              <div class="column" style="width: 50%">
+              <div class="column" style="width: 55%">
                 <h6>TEE</h6>
-                <p>
-                  Perhaps an office with <em>locked rooms</em>.
-                  <br />
-                  Workers are <em>segregated by the project</em> they work on.
-                  <br />
-                  As a manager roams the office, they
-                  <em>cannot enter</em> rooms they pass.
+                <p class="fragment custom blur" data-fragment-index="1">
+                  Perhaps an office with <em>locked rooms</em> and PAC cards.
+                </p>
+                <p class="fragment custom blur" data-fragment-index="2">
+                  A worker's access is <em>restricted</em> to their <em>room</em> only.
+                </p>
+                <p class="fragment custom blur" data-fragment-index="3">
+                  As a <em>manager</em> roams the office, they
+                  <em>cannot enter</em> locked rooms.
                 </p>
               </div>
             </div>
