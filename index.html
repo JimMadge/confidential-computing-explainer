@@ -92,32 +92,32 @@
           <p>No maths 🧮</p>
         </section>
         <section>
-          <section data-auto-animate>
+          <section data-auto-animate data-visibility="hidden">
             <h3>Summary</h3>
             <div class="columns">
               <div class="column" style="width: 40%">
                 <h6>Conventional</h6>
                 <p class="fragment custom blur">
-                  <em>Working Data</em> is <em>unencrypted</em>.
+                  <em>Working Data</em> is <em>unencrypted</em>
                 </p>
                 <p class="fragment custom blur">
                   <em>Privileged</em> users can access all working data, as
-                  <em>plain text</em>.
+                  <em>plain text</em>
                 </p>
               </div>
               <div class="column" style="width: 60%">
-                <h6>TEE</h6>
+                <h6>Trusted Execution Environment (TEE)</h6>
                 <p class="fragment custom blur">
                   <em>Encrypted</em> enclcaves are
                   <em>reserved</em> for <em>confidential working data</em>, each with
-                  its <em>own encryption key</em>.
+                  its <em>own encryption key</em>
                 </p>
                 <p class="fragment custom blur">
-                  Nothing outside of the TEE <em>cannot</em> obtain the key.
+                  Nothing outside of the TEE <em>cannot</em> obtain the key
                 </p>
                 <p class="fragment custom blur">
                   A <em>privileged</em> user would see TEE data as
-                  <em>encrypted text</em>.
+                  <em>encrypted text</em>
                 </p>
               </div>
             </div>
@@ -126,8 +126,9 @@
             <h3>Summary</h3>
             <h4>The Take Home Message</h4>
             <blockquote>
-              You can use a computer in a way that is <em>private</em>, even
-              from the <em>owner</em> of that computer.
+              With a Trusted Execution Environment (TEE), you can use a
+              computer in a way that is <em>private</em>, even from the
+              <em>owner</em> of that computer
             </blockquote>
           </section>
           <section data-auto-animate>
@@ -137,28 +138,28 @@
               <div class="column" style="width: 45%">
                 <h6>Conventional</h6>
                 <p class="fragment custom blur" data-fragment-index="1">
-                  Imagine an <em>open plan office</em>.
+                  Imagine an <em>open plan office</em>
                 </p>
                 <p class="fragment custom blur" data-fragment-index="2">
                   Each worker has a <em>desk</em>, but other workers desks are
-                  <em>visible</em>.
+                  <em>visible</em>
                 </p>
                 <p class="fragment custom blur" data-fragment-index="3">
                   A <em>manager</em> is free to roam the office at
-                  <em>look at every desk</em>.
+                  <em>look at every desk</em>
                 </p>
               </div>
               <div class="column" style="width: 55%">
                 <h6>TEE</h6>
                 <p class="fragment custom blur" data-fragment-index="1">
-                  Perhaps an office with <em>locked rooms</em> and PAC cards.
+                  Perhaps an office with <em>locked rooms</em> and key cards
                 </p>
                 <p class="fragment custom blur" data-fragment-index="2">
-                  A worker's access is <em>restricted</em> to their <em>room</em> only.
+                  A worker's access is <em>restricted</em> to their <em>room</em> only
                 </p>
                 <p class="fragment custom blur" data-fragment-index="3">
                   As a <em>manager</em> roams the office, they
-                  <em>cannot enter</em> locked rooms.
+                  <em>cannot enter</em> locked rooms
                 </p>
               </div>
             </div>
@@ -231,6 +232,7 @@
           <section data-auto-animate>
             <h3>Cryptography</h3>
             <h4>An AES Symmetric Cipher</h4>
+            <p>Advanced Encryption Standard</p>
             <p>Requires a <em>secret</em></p>
             <p class="plain-text" style="font-family: monospace">hello world</p>
             <p
@@ -249,8 +251,9 @@
             <aside data-markdown class="notes">
               A much more sophisticated cipher
 
-              The cipher requires a secret, which **must** be kept secret
-              When encoded we have a series of bytes (numbers between 0 and 250), this is just a way to represent it
+              - The cipher requires a secret, which **must** be kept secret
+              - The secret means we can use the same cipher, but can't decrypt each others data 
+              - When encoded we have a series of bytes (numbers between 0 and 250), this is just a way to represent it
 
               2.4*10^51 years to break using brute force with a supercomputer (https://bruteforce.bitsnbites.eu/)
 
@@ -273,7 +276,7 @@
             <h3>States of Data</h3>
             <blockquote>
               Data can exist in different <em>states</em> and the way we
-              <em>protect</em> it must change appropriately.
+              <em>protect</em> it must change appropriately
             </blockquote>
           </section>
           <section data-auto-animate>
