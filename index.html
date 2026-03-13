@@ -78,6 +78,10 @@
       .encrypted-text {
         color: #dc322f;
       }
+      .padded-image {
+        background-color: #839496;
+        padding: 5px;
+      }
     </style>
   </head>
   <body>
@@ -233,7 +237,7 @@
             <h3>Cryptography</h3>
             <h4>An AES Symmetric Cipher</h4>
             <p>Advanced Encryption Standard</p>
-            <p>Requires a <em>secret</em></p>
+            <p>Requires a <em>secret</em> for encryption and decryption</p>
             <p class="plain-text" style="font-family: monospace">hello world</p>
             <p
               class="encrypted-text fragment custom blur"
@@ -253,6 +257,7 @@
 
               - The cipher requires a secret, which **must** be kept secret
               - The secret means we can use the same cipher, but can't decrypt each others data 
+              - Because the same secret is used for encryption and decryption, we call this *symmetric*
               - When encoded we have a series of bytes (numbers between 0 and 250), this is just a way to represent it
 
               2.4*10^51 years to break using brute force with a supercomputer (https://bruteforce.bitsnbites.eu/)
@@ -261,13 +266,75 @@
             </aside>
           </section>
           <section data-auto-animate>
-            <h2>Cryptography</h2>
-            <h3>Lessons</h3>
+            <h3>Cryptography</h3>
+            <h4>Lessons</h4>
             <ul>
               <li>We can make data <em>unreadable</em></li>
               <li>Good ciphers are <em>very secure</em></li>
               <li>Poor ciphers are <em>easy to break</em></li>
               <li>Secrets must be <em>guarded</em></li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <section data-auto-animate>
+            <h3>Public-key encryption</h3>
+            <blockquote>
+              A type of encryption that uses a <em>pair of keys</em>.
+              <br/>
+              One key is <em>private</em> and must be kept <em>secret</em> by a <em>single person</em>.
+              The other key is <em>public</em> can be used by <em>anyone</em>.
+            </blockquote>
+          </section>
+          <section data-auto-animate>
+            <h3>Public-key encryption</h3>
+            <h4>Why is this so important?</h4>
+            <ul>
+              <li>Each key can <em>decrypt</em> messages from the other ☯️</li>
+              <li>Each key has a <em>unique</em> pair ❄️</li>
+            </ul>
+            <div class="fragment custom blur">
+              <p>By keeping one key secret, we can</p>
+              <ul>
+                <li>Use the <em>public key</em> to <em>send secrets</em> to the <em>owner</em> 🤫</li>
+                <li>Use the <em>public key</em> to verify the <em>signature</em> of the <em>owner</em> ✍️</li>
+                <li>A cryptographic way to <em>prove identity</em></li>
+              </ul>
+            </div>
+            <!-- prettier-ignore -->
+            <aside data-markdown class="notes">
+              - The pair interact with each other, they are like mirrors
+              - You cannot use a third key
+              - Enables useful functions, which prove identity
+                - Encrypting messages for a person
+                - Verifying someone's signature
+            </aside>
+          </section>
+          <section data-auto-animate>
+            <h3>Public-key encryption</h3>
+            <h4>Processes</h4>
+            <div class="r-stack">
+              <img class="fragment fade-out padded-image" data-fragment-index="0" src="static/Public_key_encryption.svg" height="525">
+              <img class="fragment padded-image" data-fragment-index="0" src="static/Private_key_signing.svg" height="525">
+            </div>
+            <!--
+              By Davidgothberg - Own work, Public Domain, https://commons.wikimedia.org/w/index.php?curid=1028460
+              By https://Reinwaldbrian49@gmail.comFlippyFlink - BrianjReinwaldCombined changed the image https://en.wikipedia.org/wiki/File:Public_key_encryption.svg from encryption to signing., CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=78867393
+            -->
+          </section>
+          <section data-auto-animate data-visibility="hidden">
+            <h3>Public-key encryption</h3>
+            <h4>An analogy …</h4>
+          </section>
+          <section data-auto-animate>
+            <h3>Public-key encryption</h3>
+            <h4>Lessons</h4>
+            <ul>
+              <li>Public-key encryption is <em>strong</em></li>
+              <li>Private keys give a sense of <em>identity</em></li>
+              <li>The private key must be kept <em>secret</em></li>
+              <li>Use the public key to send <em>secrets</em> to the owner</li>
+              <li>Use the public key to check the owners <em>signature</em></li>
             </ul>
           </section>
         </section>
