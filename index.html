@@ -95,8 +95,12 @@
           <h2 class="r-fit-text">For a General audience</h2>
         </section>
         <section>
+          <h2>This is a complex topic</h2>
           <p>Try to build from the ground up 🧱</p>
           <p>No maths 🧮</p>
+          <p class="fragment custom blur">It's fine to not cover everything ⏱️</p>
+          <p class="fragment custom blur">Think about if these explanations and analogies work 🤔</p>
+          <p class="fragment custom blur">This is a work in progress, we will talk about to how improve it in the breakout 🚧</p>
         </section>
         <section>
           <section data-auto-animate data-visibility="hidden">
@@ -115,7 +119,7 @@
               <div class="column" style="width: 60%">
                 <h6>Trusted Execution Environment (TEE)</h6>
                 <p class="fragment custom blur">
-                  <em>Encrypted</em> enclcaves are
+                  <em>Encrypted</em> enclaves are
                   <em>reserved</em> for <em>confidential working data</em>, each with
                   its <em>own encryption key</em>
                 </p>
@@ -129,7 +133,7 @@
               </div>
             </div>
           </section>
-          <section data-auto-animate>
+          <section data-auto-animate id="summary">
             <h3>Summary</h3>
             <h4>The Take Home Message</h4>
             <blockquote>
@@ -137,6 +141,7 @@
               computer in a way that is <em>private</em>, even from the
               <em>owner</em> of that computer
             </blockquote>
+            <p class="fragment data blur">TEEs protect data <em>in use</em> rather than in storage or being transferred</p>
           </section>
           <section data-auto-animate>
             <h3>Summary</h3>
@@ -148,11 +153,10 @@
                   Imagine an <em>open plan office</em>
                 </p>
                 <p class="fragment custom blur" data-fragment-index="2">
-                  Each worker has a <em>desk</em>, but other workers desks are
-                  <em>visible</em>
+                  Each worker has a <em>desk</em>, but others are <em>visible</em>
                 </p>
                 <p class="fragment custom blur" data-fragment-index="3">
-                  A <em>manager</em> is free to roam the office at
+                  A <em>manager</em> is free to
                   <em>look at every desk</em>
                 </p>
               </div>
@@ -165,8 +169,7 @@
                   A worker's access is <em>restricted</em> to their <em>room</em> only
                 </p>
                 <p class="fragment custom blur" data-fragment-index="3">
-                  As a <em>manager</em> roams the office, they
-                  <em>cannot enter</em> locked rooms
+                  A <em>manager</em> <em>cannot enter</em> locked rooms
                 </p>
               </div>
             </div>
@@ -296,14 +299,12 @@
               <li>Each key can <em>decrypt</em> messages from the other ☯️</li>
               <li>Each key has a <em>unique</em> pair ❄️</li>
             </ul>
-            <div class="fragment custom blur">
-              <p>By keeping one key secret, we can</p>
-              <ul>
-                <li>Use the <em>public key</em> to <em>send secrets</em> to the <em>owner</em> 🤫</li>
-                <li>Use the <em>public key</em> to verify the <em>signature</em> of the <em>owner</em> ✍️</li>
-                <li>A cryptographic way to <em>prove identity</em></li>
-              </ul>
-            </div>
+            <p>By keeping one key secret, we can</p>
+            <ul>
+              <li class="fragment custom blur">Use the <em>public key</em> to <em>send secrets</em> to the <em>owner</em> 🤫</li>
+              <li class="fragment custom blur">Use the <em>public key</em> to verify the <em>signature</em> of the <em>owner</em> ✍️</li>
+              <li class="fragment custom blur">A cryptographic way to <em>prove identity</em> 🛂</li>
+            </ul>
             <!-- prettier-ignore -->
             <aside data-markdown class="notes">
               - The pair interact with each other, they are like mirrors
@@ -355,7 +356,7 @@
               <li>Key owners can <em>sign</em> others' public keys</li>
               <li>We can use <em>public keys</em> to <em>verify</em> signatures</li>
             </ol>
-            <p>Therefore, we can <em>indirectly</em> trust identities if they are <em>signed</em> by people we do trust</p>
+            <p class="fragment custom blur">Therefore, we can <em>indirectly</em> trust identities if they are <em>signed</em> by people we do trust</p>
           </section>
           <section>
             <h3>Trust</h3>
@@ -465,13 +466,13 @@
         <section>
           <section data-auto-animate>
             <h3>Computers</h3>
-            <p>Computers are just <em>machines</em></p>
+            <p>Computers are just <em>machines</em> ⚙️</p>
             <div class="r-stack">
               <img src="static/babbages_analytical_engine.jpg" width="500">
               <!-- By Charles Babbage - Upload by Mrjohncummings 2013-08-28 15:10, CC BY-SA 2.0, https://commons.wikimedia.org/w/index.php?curid=28024313 -->
-              <p class="fragment solid">The powerful thing is they are <em>dynamic and reactive</em>, a single computer can be <em>programmed</em> to do many things</p>
+              <p class="fragment solid">The powerful thing is they are <em>dynamic and reactive</em>, a single computer can be <em>programmed</em> to do many things 🪄</p>
             </div>
-            <p>They take <em>inputs</em> and perform <em>instructions</em> to create <em>outputs</em>
+            <p>They take <em>inputs</em> and perform <em>instructions</em> to create <em>outputs</em> 🏭
           </section>
           <section data-auto-animate>
             <h3>Computers</h3>
@@ -546,7 +547,7 @@
             <h4>How we trust them</h4>
             <ul>
               <li>AES encryption is <em>strong</em></li>
-              <li>CPU <em>signs</em> evidence (with private key)</li>
+              <li>CPU <em>signs</em> evidence</li>
               <li>Hardware vendor <em>verifies</em> signature and evidence</li>
               <li>Report is <em>signed</em>, and you can <em>verify</em></li>
             </ul>
@@ -570,7 +571,12 @@
               <li><em>Evidence</em> and <em>report</em> are signed and verifiable</li>
               <li>Root of trust in <em>hardware</em>, and <em>hardware vendor</em></li>
             </ul>
+            <p><a href="#/summary">Back to the summary</a></p>
           </section>
+        </section>
+        <section data-visibility="hidden">
+          <section data-auto-animate>
+            <h3>Attestation</h3>
         </section>
       </div>
     </div>
