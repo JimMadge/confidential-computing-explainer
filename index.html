@@ -98,9 +98,16 @@
           <h2>This is a complex topic</h2>
           <p>Try to build from the <em>ground up</em> 🧱</p>
           <p><em>No</em> maths 🧮</p>
-          <p class="fragment custom blur">It's fine to <em>not</em> cover everything ⏱️</p>
-          <p class="fragment custom blur">Think about if these <em>explanations and analogies</em> work 🤔</p>
-          <p class="fragment custom blur">This is a <em>work in progress</em>, we will talk about to how improve it in the <em>breakout</em> 🚧</p>
+          <p class="fragment custom blur">
+            It's fine to <em>not</em> cover everything ⏱️
+          </p>
+          <p class="fragment custom blur">
+            Think about if these <em>explanations and analogies</em> work 🤔
+          </p>
+          <p class="fragment custom blur">
+            This is a <em>work in progress</em>, we will talk about to how
+            improve it in the <em>breakout</em> 🚧
+          </p>
         </section>
         <section>
           <section data-auto-animate data-visibility="hidden">
@@ -119,9 +126,9 @@
               <div class="column" style="width: 60%">
                 <h6>Trusted Execution Environment (TEE)</h6>
                 <p class="fragment custom blur">
-                  <em>Encrypted</em> enclaves are
-                  <em>reserved</em> for <em>confidential working data</em>, each with
-                  its <em>own encryption key</em>
+                  <em>Encrypted</em> enclaves are <em>reserved</em> for
+                  <em>confidential working data</em>, each with its
+                  <em>own encryption key</em>
                 </p>
                 <p class="fragment custom blur">
                   Nothing outside of the TEE <em>cannot</em> obtain the key
@@ -141,7 +148,10 @@
               computer in a way that is <em>private</em>, even from the
               <em>owner</em> of that computer
             </blockquote>
-            <p class="fragment data blur">TEEs protect data <em>in use</em> rather than in storage or being transferred</p>
+            <p class="fragment data blur">
+              TEEs protect data <em>in use</em> rather than in storage or being
+              transferred
+            </p>
           </section>
           <section data-auto-animate>
             <h3>Summary</h3>
@@ -153,7 +163,8 @@
                   Imagine an <em>open plan office</em>
                 </p>
                 <p class="fragment custom blur" data-fragment-index="2">
-                  Each worker has a <em>desk</em>, but others are <em>visible</em>
+                  Each worker has a <em>desk</em>, but others are
+                  <em>visible</em>
                 </p>
                 <p class="fragment custom blur" data-fragment-index="3">
                   A <em>manager</em> is free to
@@ -166,7 +177,8 @@
                   Perhaps an office with <em>locked rooms</em> and key cards
                 </p>
                 <p class="fragment custom blur" data-fragment-index="2">
-                  A worker's access is <em>restricted</em> to their <em>room</em> only
+                  A worker's access is <em>restricted</em> to their
+                  <em>room</em> only
                 </p>
                 <p class="fragment custom blur" data-fragment-index="3">
                   A <em>manager</em> <em>cannot enter</em> locked rooms
@@ -287,9 +299,10 @@
             <h3>Public-key encryption</h3>
             <blockquote>
               A type of encryption that uses a <em>pair of keys</em>.
-              <br/>
-              One key is <em>private</em> and must be kept <em>secret</em> by a <em>single person</em>.
-              The other key is <em>public</em> can be used by <em>anyone</em>.
+              <br />
+              One key is <em>private</em> and must be kept <em>secret</em> by a
+              <em>single person</em>. The other key is <em>public</em> can be
+              used by <em>anyone</em>.
             </blockquote>
           </section>
           <section data-auto-animate>
@@ -301,9 +314,17 @@
             </ul>
             <p>By keeping one key secret, we can</p>
             <ul>
-              <li class="fragment custom blur">Use the <em>public key</em> to <em>send secrets</em> to the <em>owner</em> 🤫</li>
-              <li class="fragment custom blur">Use the <em>public key</em> to verify the <em>signature</em> of the <em>owner</em> ✍️</li>
-              <li class="fragment custom blur">A cryptographic way to <em>prove identity</em> 🛂</li>
+              <li class="fragment custom blur">
+                Use the <em>public key</em> to <em>send secrets</em> to the
+                <em>owner</em> 🤫
+              </li>
+              <li class="fragment custom blur">
+                Use the <em>public key</em> to verify the <em>signature</em> of
+                the <em>owner</em> ✍️
+              </li>
+              <li class="fragment custom blur">
+                A cryptographic way to <em>prove identity</em> 🛂
+              </li>
             </ul>
             <!-- prettier-ignore -->
             <aside data-markdown class="notes">
@@ -318,8 +339,18 @@
             <h3>Public-key encryption</h3>
             <h4>Processes</h4>
             <div class="r-stack">
-              <img class="fragment fade-out padded-image" data-fragment-index="0" src="static/Public_key_encryption.svg" height="525">
-              <img class="fragment padded-image" data-fragment-index="0" src="static/Private_key_signing.svg" height="525">
+              <img
+                class="fragment fade-out padded-image"
+                data-fragment-index="0"
+                src="static/Public_key_encryption.svg"
+                height="525"
+              />
+              <img
+                class="fragment padded-image"
+                data-fragment-index="0"
+                src="static/Private_key_signing.svg"
+                height="525"
+              />
             </div>
             <!--
               By Davidgothberg - Own work, Public Domain, https://commons.wikimedia.org/w/index.php?curid=1028460
@@ -346,7 +377,8 @@
           <section data-auto-animate>
             <h3>Trust</h3>
             <blockquote>
-              Establishing <em>confidence</em> of identity through the <em>signing</em> of <em>public keys</em>
+              Establishing <em>confidence</em> of identity through the
+              <em>signing</em> of <em>public keys</em>
             </blockquote>
           </section>
           <section data-auto-animate>
@@ -354,14 +386,19 @@
             <h4>How trust works</h4>
             <ol>
               <li>Key owners can <em>sign</em> others' public keys</li>
-              <li>We can use <em>public keys</em> to <em>verify</em> signatures</li>
+              <li>
+                We can use <em>public keys</em> to <em>verify</em> signatures
+              </li>
             </ol>
-            <p class="fragment custom blur">Therefore, we can <em>indirectly</em> trust identities if they are <em>signed</em> by people we do trust</p>
+            <p class="fragment custom blur">
+              Therefore, we can <em>indirectly</em> trust identities if they are
+              <em>signed</em> by people we do trust
+            </p>
           </section>
           <section>
             <h3>Trust</h3>
             <h4>Web of trust</h4>
-            <img class="padded-image" src="static/Web_of_Trust-en.svg">
+            <img class="padded-image" src="static/Web_of_Trust-en.svg" />
             <!--
               By Kku - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=80652637
             -->
@@ -369,9 +406,18 @@
           <section>
             <h3>Trust</h3>
             <h4>Root of Trust</h4>
-            <p>An approach where a <em>single</em>, <em>authoritative</em> entity signs trusted parties</p>
-            <p>Browsing the internet securely currently relies on a small set of <em>Certificate Authorities</em> (CAs) who verify websites.</p>
-            <p>Public keys for these CAs are distributed with operating systems and browsers</p>
+            <p>
+              An approach where a <em>single</em>, <em>authoritative</em> entity
+              signs trusted parties
+            </p>
+            <p>
+              Browsing the internet securely currently relies on a small set of
+              <em>Certificate Authorities</em> (CAs) who verify websites.
+            </p>
+            <p>
+              Public keys for these CAs are distributed with operating systems
+              and browsers
+            </p>
           </section>
           <section data-visibility="hidden">
             <h3>Trust</h3>
@@ -382,9 +428,17 @@
             <h3>Trust</h3>
             <h4>Lessons</h4>
             <ul>
-              <li>We can use public-key cryptography to <em>establish trust</em></li>
-              <li>We can <em>indirectly trust</em> identities, through <em>signatures</em> we do trust</li>
-              <li>There are different <em>structures</em> of trust: webs, chains, root</li>
+              <li>
+                We can use public-key cryptography to <em>establish trust</em>
+              </li>
+              <li>
+                We can <em>indirectly trust</em> identities, through
+                <em>signatures</em> we do trust
+              </li>
+              <li>
+                There are different <em>structures</em> of trust: webs, chains,
+                root
+              </li>
               <li>It is difficult to build a large web of trust</li>
             </ul>
           </section>
@@ -468,29 +522,37 @@
             <h3>Computers</h3>
             <p>Computers are just <em>machines</em> ⚙️</p>
             <div class="r-stack">
-              <img src="static/babbages_analytical_engine.jpg" width="500">
+              <img src="static/babbages_analytical_engine.jpg" width="500" />
               <!-- By Charles Babbage - Upload by Mrjohncummings 2013-08-28 15:10, CC BY-SA 2.0, https://commons.wikimedia.org/w/index.php?curid=28024313 -->
-              <p class="fragment solid">The powerful thing is they are <em>dynamic and reactive</em>, a single computer can be <em>programmed</em> to do many things 🪄</p>
+              <p class="fragment solid">
+                The powerful thing is they are <em>dynamic and reactive</em>, a
+                single computer can be <em>programmed</em> to do many things 🪄
+              </p>
             </div>
-            <p>They take <em>inputs</em> and perform <em>instructions</em> to create <em>outputs</em> 🏭
+            <p>
+              They take <em>inputs</em> and perform <em>instructions</em> to
+              create <em>outputs</em> 🏭
+            </p>
           </section>
           <section data-auto-animate>
             <h3>Computers</h3>
             <h4>How they work</h4>
-            <img class="r-stretch" src="static/computer.svg">
+            <img class="r-stretch" src="static/computer.svg" />
             <aside data-markdown class="notes">
-              - "Data" is stored in memory
-              - The CPU has a list of instructions
-              - It iterates through the instructions, and works on data in its registeries
-              - Data in memory is not encrypted
-              - In practice, memory is generally reserved, but it is possible to read/change arbitrary memory
+              - "Data" is stored in memory - The CPU has a list of instructions
+              - It iterates through the instructions, and works on data in its
+              registeries - Data in memory is not encrypted - In practice,
+              memory is generally reserved, but it is possible to read/change
+              arbitrary memory
             </aside>
           </section>
           <section data-auto-animate>
             <h3>Computers</h3>
             <h4>Lessons</h4>
             <ul>
-              <li>Computers can be <em>programmed</em> to <em>process data</em></li>
+              <li>
+                Computers can be <em>programmed</em> to <em>process data</em>
+              </li>
               <li>Data and instructions are stored in <em>memory</em></li>
               <li>Memory is generally <em>not encrypted</em></li>
               <li>It is possible to read or manipulate arbitrary memory</li>
@@ -502,13 +564,15 @@
             <h3>Trusted Execution Environments</h3>
             <h4>How they work</h4>
             <div class="r-stack">
-              <img class="r-stretch" src="static/secure_memory.svg">
+              <img class="r-stretch" src="static/secure_memory.svg" />
               <ul class="fragment solid">
                 <li>
                   Secure processor
                   <ul>
                     <li>Memory <em>routed</em> to correct enclave</li>
-                    <li><em>Encryption and decryption</em> between CPU and memory</li>
+                    <li>
+                      <em>Encryption and decryption</em> between CPU and memory
+                    </li>
                   </ul>
                 </li>
                 <li>
@@ -521,14 +585,13 @@
               </ul>
             </div>
             <aside data-markdown class="notes">
-              - There are different implementations, but this is a rough overview of the underlying tech
-              - Secure enclaves
-              - Each process/guest has it's memory mapped to a specific enclave
-                - Other memory is _not_ visible
-              - Memory is encrypted with unique secret (likely AES)
-              - Encryption/decryption happens at CPU level
-              - The keys are not available to anyone else
-                - They are in a secure processor
+              - There are different implementations, but this is a rough
+              overview of the underlying tech - Secure enclaves - Each
+              process/guest has it's memory mapped to a specific enclave - Other
+              memory is _not_ visible - Memory is encrypted with unique secret
+              (likely AES) - Encryption/decryption happens at CPU level - The
+              keys are not available to anyone else - They are in a secure
+              processor
             </aside>
           </section>
           <section data-auto-animate>
@@ -552,14 +615,13 @@
               <li>Report is <em>signed</em>, and you can <em>verify</em></li>
             </ul>
             <aside data-markdown class="notes">
-              - Trust hardware (root of trust in vendor)
-              - Secure enclave created
-                - Memory is encrypted, secret is held by CPU and inaccessible to others
-              - Attestation evidence generated by trusted hardware, signed
-              - Attestation report
-                - Validated (signature checked) by hardware vendor
-              - _You_ decide look at the report and decide whether to proceed
-              - Attestation is a big topic on its own, we don't go into detail here
+              - Trust hardware (root of trust in vendor) - Secure enclave
+              created - Memory is encrypted, secret is held by CPU and
+              inaccessible to others - Attestation evidence generated by trusted
+              hardware, signed - Attestation report - Validated (signature
+              checked) by hardware vendor - _You_ decide look at the report and
+              decide whether to proceed - Attestation is a big topic on its own,
+              we don't go into detail here
             </aside>
           </section>
           <section data-auto-animate>
@@ -568,8 +630,12 @@
             <ul>
               <li>There are different <em>implementations</em></li>
               <li><em>Strong encryption</em> of memory</li>
-              <li><em>Evidence</em> and <em>report</em> are signed and verifiable</li>
-              <li>Root of trust in <em>hardware</em>, and <em>hardware vendor</em></li>
+              <li>
+                <em>Evidence</em> and <em>report</em> are signed and verifiable
+              </li>
+              <li>
+                Root of trust in <em>hardware</em>, and <em>hardware vendor</em>
+              </li>
             </ul>
             <p><a href="#/summary">Back to the summary</a></p>
           </section>
@@ -577,6 +643,7 @@
         <section data-visibility="hidden">
           <section data-auto-animate>
             <h3>Attestation</h3>
+          </section>
         </section>
       </div>
     </div>
